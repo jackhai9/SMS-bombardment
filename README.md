@@ -77,6 +77,36 @@
    wrangler pages dev .
    ```
 
+### 提交代码
+
+```bash
+# 1. 添加修改的文件
+git add .
+
+# 2. 提交代码（写清楚修改内容）
+git commit -m "feat: 你的修改描述"
+
+# 3. 推送到 main 分支（会自动触发部署）
+git push origin main
+```
+
+### 手动部署
+
+如果自动部署未生效，可使用以下命令手动部署：
+
+```bash
+# 部署到 Cloudflare Pages
+npx wrangler pages deploy . --project-name sms-bombing-tool --branch main
+```
+
+### 清除缓存
+
+如果部署后页面未更新，需要清除 CDN 缓存：
+
+1. 进入 [Cloudflare Dashboard](https://dash.cloudflare.com/)
+2. 选择 **Caching** → **Configuration**
+3. 点击 **Purge Everything**
+
 ## 🔧 配置说明
 
 ### wrangler.toml 配置
