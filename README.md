@@ -110,7 +110,7 @@ name = "sms-bombing-tool-preview"
 ## 🌐 访问地址
 
 - **生产环境**：`https://sms-bombing-tool.pages.dev`
-- **预览环境**：`https://sms-bombing-tool-preview.pages.dev`
+- 每天十万次额度访问
 
 ## 📄 许可证
 
