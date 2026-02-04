@@ -50,8 +50,8 @@ export async function onRequest(context) {
       : decodeURIComponent(targetUrl);
 
     const proxyHeaders = new Headers();
-    // const excludeHeaders = ["host", "origin", "referer", "cookie"];
-    const excludeHeaders = [];
+    const excludeHeaders = ["host", "origin", "referer", "cookie"];
+    // const excludeHeaders = [];
 
     for (const [key, value] of request.headers) {
       const lowerKey = key.toLowerCase();
