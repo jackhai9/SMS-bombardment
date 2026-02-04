@@ -51,7 +51,7 @@ export async function onRequest(context) {
 
     const proxyHeaders = new Headers();
     // const excludeHeaders = ["host", "origin", "referer", "cookie"];
-    const excludeHeaders = ["host"];
+    const excludeHeaders = [];
 
     for (const [key, value] of request.headers) {
       const lowerKey = key.toLowerCase();
