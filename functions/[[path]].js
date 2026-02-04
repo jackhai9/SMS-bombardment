@@ -6,11 +6,26 @@
  */
 
 export async function onRequest(context) {
-  const { request, env } = context;
+  const { request } = context;
   const url = new URL(request.url);
   const pathname = url.pathname;
 
-  // 1. 静态资源和本站关键路径绕过（让 Pages 原生处理）
+  // 1) 预检永远优先处理
+  if (request.method === "OPTIONS") {
+    return handleCORS();
+  }
+
+  // 2) 先取目标 URL
+  let targetUrl = url.searchParams.get("url");
+
+  if (!targetUrl) {
+    const candidate = pathname.startsWith("/") ? pathname.slice(1) : pathname;
+    if (candidate.startsWith("http")) {
+      targetUrl = decodeURIComponent(candidate) + url.search;
+    }
+  }
+
+  // 3) 只有在没有代理目标时，才把根路径等交回静态站点处理
   const isStaticAsset =
     pathname === "/" ||
     pathname === "/index.html" ||
@@ -20,97 +35,69 @@ export async function onRequest(context) {
     pathname === "/wrangler.toml" ||
     pathname === "/wrangler.json";
 
-  if (isStaticAsset) {
+  if (isStaticAsset && !targetUrl) {
     return context.next();
   }
 
-  // 2. 获取目标 URL
-  let targetUrl = url.searchParams.get("url");
-
-  if (!targetUrl) {
-    // 尝试从路径中直接解析目标 URL (例如 /https://example.com)
-    const candidate = pathname.startsWith("/") ? pathname.slice(1) : pathname;
-
-    // 如果路径以 http 开头，说明它是一个待代理的 URL
-    if (candidate.startsWith("http")) {
-      // 拼接上原始请求的查询参数（如果有）
-      targetUrl = decodeURIComponent(candidate) + url.search;
-    }
-  }
-
-  // 3. 处理 OPTIONS 预检请求
-  if (request.method === "OPTIONS") {
-    return handleCORS();
-  }
-
-  // 4. 如果仍未找到有效的代理目标，且不是忽略路径，则返回 context.next()
+  // 4) 仍然没有目标就交回 Pages
   if (!targetUrl) {
     return context.next();
   }
 
   try {
-    // 解码并规范化目标 URL
     const decodedUrl = targetUrl.startsWith("http")
       ? targetUrl
       : decodeURIComponent(targetUrl);
 
-    // 构建代理请求选项
-    const proxyRequestInit = {
-      method: request.method,
-      headers: {},
-      redirect: "follow",
-    };
-
-    // 复制请求头（排除 Host 等敏感或受限头）
+    const proxyHeaders = new Headers();
     const excludeHeaders = ["host", "origin", "referer", "cookie"];
+
     for (const [key, value] of request.headers) {
       const lowerKey = key.toLowerCase();
       if (!excludeHeaders.includes(lowerKey)) {
-        proxyRequestInit.headers[key] = value;
+        proxyHeaders.set(key, value);
       }
     }
 
-    // 处理请求体（仅限有 Body 的方法）
-    if (["POST", "PUT", "PATCH"].includes(request.method)) {
-      proxyRequestInit.body = await request.text();
-    }
-
-    // 发起代理请求（添加 10 秒超时控制）
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 10000);
 
+    let body;
+    const method = request.method.toUpperCase();
+    const hasBody = !["GET", "HEAD"].includes(method);
+
+    if (hasBody) {
+      body = await request.arrayBuffer();
+    }
+
     try {
-      const response = await fetch(decodedUrl, {
-        ...proxyRequestInit,
+      const upstream = await fetch(decodedUrl, {
+        method,
+        headers: proxyHeaders,
+        body,
+        redirect: "follow",
         signal: controller.signal,
       });
       clearTimeout(timeoutId);
 
-      // 复制原始响应头并添加跨域所需的 CORS 头
-      const responseHeaders = new Headers(response.headers);
+      const responseHeaders = new Headers(upstream.headers);
       const corsHeaders = getCORSHeaders();
-
-      for (const [key, value] of Object.entries(corsHeaders)) {
-        responseHeaders.set(key, value);
+      for (const [k, v] of Object.entries(corsHeaders)) {
+        responseHeaders.set(k, v);
       }
 
-      // 禁止响应被强缓存
-      responseHeaders.set(
-        "Cache-Control",
-        "no-store, no-cache, must-revalidate",
-      );
+      responseHeaders.set("Cache-Control", "no-store, no-cache, must-revalidate");
       responseHeaders.set("Pragma", "no-cache");
       responseHeaders.set("Expires", "0");
 
-      // 返回代理后的响应
-      return new Response(response.body, {
-        status: response.status,
-        statusText: response.statusText,
+      return new Response(upstream.body, {
+        status: upstream.status,
+        statusText: upstream.statusText,
         headers: responseHeaders,
       });
     } catch (fetchError) {
       clearTimeout(timeoutId);
-      if (fetchError.name === "AbortError") {
+      if (fetchError && fetchError.name === "AbortError") {
         return new Response("代理请求超时", {
           status: 504,
           headers: getCORSHeaders(),
@@ -126,9 +113,6 @@ export async function onRequest(context) {
   }
 }
 
-/**
- * 处理 CORS 预检
- */
 function handleCORS() {
   return new Response(null, {
     status: 204,
@@ -136,9 +120,6 @@ function handleCORS() {
   });
 }
 
-/**
- * 获取标准 CORS 响应头
- */
 function getCORSHeaders() {
   return {
     "Access-Control-Allow-Origin": "*",
@@ -148,3 +129,4 @@ function getCORSHeaders() {
     "Access-Control-Expose-Headers": "*",
   };
 }
+
