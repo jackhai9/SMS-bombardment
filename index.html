@@ -4295,7 +4295,7 @@ button:hover {
             isRunning = false;
             document.getElementById('sendBtn').style.display = 'inline-block';
             document.getElementById('stopBtn').style.display = 'none';
-            addLog('⏹️ 已停止向 ${phoneNumber} 发送短信', 'error');
+            addLog(`⏹️ 已停止向 ${phoneNumber} 发送短信`, 'error');
             console.log('⏹️ 用户主动停止');
         }
         
@@ -4552,7 +4552,7 @@ button:hover {
     // 添加最终统计日志（显示完整统计）
     addLog('─'.repeat(30), 'system');
     if (wasRunning) {
-        addLog(`📊 发送完成！`, 'system');
+        addLog(`📊 向 ${phoneNumber} 发送短信完成！`, 'system');
     } else {
         addLog(`⏹️ 已停止向 ${phoneNumber} 发送短信`, 'system');
     }
